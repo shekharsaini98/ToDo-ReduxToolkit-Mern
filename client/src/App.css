@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+  max-width: 80vw;
+  margin: 20px auto;
+}
+input:focus {
+  border-bottom: 2px solid #e040fb !important;
+  box-shadow: none !important;
+}
+.collection-item:hover {
+  text-decoration: line-through;
+  border: 1px solid #e040fb;
+  cursor: pointer;
+}

@@ -5,7 +5,6 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('./models/user');
 const Todo = require('./models/todo');
-const user = require('./models/user');
 const PORT = 5000;
 const {JWT_SECRET, MONGOURI} = require('./config/keys');
 mongoose.connect(MONGOURI, {

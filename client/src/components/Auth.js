@@ -23,17 +23,23 @@ function Auth() {
                     <div className="indeterminate"></div>
                 </div>
             }
-            <h1>Please {auth}! </h1>
+            <h1 className="text-capital">Please {auth}! </h1>
             {
                 error &&
-                <h5>{error}</h5>
+                <h5 className="text-capital"><b className="white-text purple darken-4 errorShow">{error}</b></h5>
             }
-            <input type="email" name="email" value={email} onChange={(e)=>setEmail(e.target.value)} id="email" />
-            <input type="password" name="password" value={password} onChange={(e)=>setPassword(e.target.value)} id="password" />
+            <div className="row card-panel grey lighten-5 z-depth-1">
+                <div className="input-field col s12">
+                    <input type="email" name="email" className="validate" placeholder="Email" value={email} onChange={(e)=>setEmail(e.target.value)} id="emailLabel" />
+                </div>
+                <div className="input-field col s12">
+                    <input type="password" name="password" className="validate" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)} id="passwordLabel" />
+                </div>
+            </div>
             {
                 auth === 'signIn'?
-                <h6 onClick={()=>setAuth('signUp')}>Dont have an account?</h6>:
-                <h6 onClick={()=>setAuth('signIn')}>Already Have an account?</h6>
+                <h6>Don't have an account? <span onClick={()=>setAuth('signUp')} className="purple-text text-darken-3"><b>Create One</b></span></h6>:
+                <h6>Already Have an account? <span onClick={()=>setAuth('signIn')} className="purple-text text-darken-3"><b>Login</b></span></h6>
             }
             <button className="btn purple accent-3" onClick={()=>authenticate()}>{auth}</button>
         </div>

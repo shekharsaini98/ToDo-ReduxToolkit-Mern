@@ -7,8 +7,20 @@ input:focus {
   border-bottom: 2px solid #e040fb !important;
   box-shadow: none !important;
 }
+.collection-item {
+  font-weight: 500;
+}
 .collection-item:hover {
   text-decoration: line-through;
-  border: 1px solid #e040fb;
+  background: #e040fb;
   cursor: pointer;
+}
+.text-capital {
+  text-transform: capitalize;
+}
+.errorShow {
+  padding: 3px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: inline-block;
 }

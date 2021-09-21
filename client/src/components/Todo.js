@@ -22,11 +22,10 @@ function Todo() {
     return (
         <div>
             <button className="btn purple accent-3" onClick={()=>userlogout()}>Logout</button>
-
             <input type="text" value={mytodo} onChange={(e)=>setTodo(e.target.value)} name="" id="" placeholder="What's in your TO-DO list?" />
             <button className="btn purple accent-3" onClick={()=>addTodo()} >Create To-Do</button>
             <br/>
-            <ul className="collection">
+            <ul className="collection card-panel z-depth-1">
             {
                 todos.map(item => {
                     return <li onClick={()=>{delTodo(item._id)}} className="collection-item" key={item._id}>{item.todo}</li>
